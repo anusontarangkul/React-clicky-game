@@ -1,0 +1,8 @@
+.image-edits {
+  max-width: 250px;
+  height: auto;
+}
+
+.image-edits :hover {
+  cursor: pointer;
+}
