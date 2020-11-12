@@ -13,7 +13,13 @@ class App extends Component {
 
 
   render() {
-    return (<Nav></Nav>)
+    return (
+      <Wrapper>
+        <Nav></Nav>
+        <Jumbo></Jumbo>
+        <Card></Card>
+        <Footer></Footer>
+      </Wrapper>)
 
 
   }
