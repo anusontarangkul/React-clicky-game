@@ -4,11 +4,18 @@ import Nav from "./components/Nav";
 import Jumbo from "./components/Jumbo";
 import Footer from "./components/Footer";
 import Card from "./components/Card";
+import Memes from "./Memes.json";
 import './App.css';
 
+let clickedCheck = [];
 
 class App extends Component {
-
+  state = {
+    Memes: Memes,
+    score: 0,
+    highScore: 0,
+    message: "Click a picture to start!"
+  }
 
 
 
