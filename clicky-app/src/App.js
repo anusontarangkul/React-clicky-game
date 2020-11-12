@@ -22,37 +22,30 @@ class App extends Component {
   render() {
     return (
       <Wrapper>
-        <Nav></Nav>
-        <Jumbo></Jumbo>
-        <Card></Card>
-        <Footer></Footer>
-      </Wrapper>)
+        <Nav
+          score={this.state.score}
+          topScore={this.state.highScore}
+          message={this.state.message} />
+        <Jumbo />
+        <div className="container">
+          <div className="row">
+            {this.state.Memes.map(memes => (
+              <Card
+                key={memes.id}
+                imageURGL={memes.image}
+                id={memes.id}
+                alt={memes.name}
+                handleClick={this.handleClick}
+              />
+            ))}
+          </div>
 
+        </div>
+
+      </Wrapper>
+    )
 
   }
 }
 export default App;
 
-
-// Components
-
-
-//navbar
-   //dyanmic count
-   //prop for score, top, message
-  //  score variable = 0
-  //  increments
-
-//jumbo
-
-
-// card
-
-//footer
-
-//json file for my cards
-
-  //need state for my characters
-  // here are your states and functions
-
-// are you components and what you want to do to them. 
