@@ -55,17 +55,18 @@ class App extends Component {
         <Jumbo />
         <div className="container">
           <div className="row">
-            {this.state.Memes.map(memes => (
-              <Card
-                key={memes.id}
-                imageURL={memes.image}
-                id={memes.id}
-                alt={memes.name}
-                handleClick={this.handleClick}
-              />
-            ))}
+            <div className="col-3">
+              {this.state.Memes.map(memes => (
+                <Card
+                  key={memes.id}
+                  imageURL={memes.image}
+                  id={memes.id}
+                  alt={memes.name}
+                  handleClick={this.handleClick}
+                />
+              ))}
+            </div>
           </div>
-
         </div>
 
       </Wrapper>

@@ -3,9 +3,12 @@ import "./style.css";
 
 function Card(props) {
     return (
-        <div className="Card">
-            <div className="img-container">
-                <img onClick={props.handleClick} id={props.id} src={props.imageURL} className="card-img-top images" alt={props.alt} data-id={props.id}></img>
+
+        <div className="container">
+            <div className="row">
+                <div className="col-4">
+                    <img onClick={props.handleClick} id={props.id} src={props.imageURL} className="image-edits" alt={props.alt} data-id={props.id}></img>
+                </div>
             </div>
         </div>
     )
