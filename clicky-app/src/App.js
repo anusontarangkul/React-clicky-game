@@ -19,8 +19,30 @@ class App extends Component {
 
   handleClick = (event) => {
     const currentId = event.target.getAttribute("data-id");
-  }
+    this.setState({ message: "Let's play" })
+    if (!clickedCheck.includes(currentId)) {
+      clickedCheck.push(currentId)
+      let newCount = this.state.score + 1;
+      this.setState({ score: newCount });
+      this.setState({ message: "Good Job!" })
+      if (newCount > this.state.highScore) {
+        this.setState({ highScore: newCount })
+      }
+    } else {
+      this.setState({ score: 0 });
+      this.setState({ message: "Incorrect" })
+      clickedCheck = [];
+    }
 
+    const arr = this.state.Memes;
+    for (let i = arr.length - 1; i > 0; i--) {
+      let j = Math.floor(Math.random() * arr.length);
+      let hold = arr[i];
+      arr[i] = arr[j];
+      arr[j] = hold;
+    }
+    this.setState({ Memes: arr });
+  };
 
 
   render() {
