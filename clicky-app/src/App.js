@@ -17,6 +17,10 @@ class App extends Component {
     message: "Click a picture to start!"
   }
 
+  handleClick = (event) => {
+    const currentId = event.target.getAttribute("data-id");
+  }
+
 
 
   render() {
@@ -32,7 +36,7 @@ class App extends Component {
             {this.state.Memes.map(memes => (
               <Card
                 key={memes.id}
-                imageURGL={memes.image}
+                imageURL={memes.image}
                 id={memes.id}
                 alt={memes.name}
                 handleClick={this.handleClick}
